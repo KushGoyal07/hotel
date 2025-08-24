@@ -25,6 +25,12 @@ router.get("/", async (req, res) => {
   res.json(hotels);
 });
 
+// Get featured hotels
+router.get("/featured", async (req, res) => {
+  const hotels = await Hotel.find({ featured: true }).sort({ createdAt: -1 }).limit(5);
+  res.json(hotels);
+});
+
 // Get by id
 router.get("/:id", async (req, res) => {
   const hotel = await Hotel.findById(req.params.id);
