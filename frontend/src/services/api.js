@@ -10,4 +10,7 @@ instance.interceptors.request.use((config)=>{
   }
   return config
 })
+
+export const getFeaturedHotels = () => instance.get("/api/hotels/featured");
+
 export default instance

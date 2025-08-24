@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import FeaturedHotels from "../components/FeaturedHotels";
 export default function Home(){
   return (
     <main className="container-page py-8 space-y-12">
@@ -14,6 +15,9 @@ export default function Home(){
           </div>
         </div>
       </section>
+
+      <FeaturedHotels />
+
       <section>
         <h3 className="mb-4">Popular Destinations</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

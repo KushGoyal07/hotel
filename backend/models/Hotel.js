@@ -7,6 +7,7 @@ const hotelSchema = new mongoose.Schema({
   description: { type: String, default: "" },
   pricePerNight: { type: Number, required: true },
   rating: { type: Number, default: 4.5 },
+  featured: { type: Boolean, default: false },
   imageUrl: { type: String, default: "https://source.unsplash.com/800x600/?hotel,resort" },
   amenities: [{ type: String }],
   createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" }
